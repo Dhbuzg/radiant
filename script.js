@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Définition des projets avec leurs médias associés
   const projects = {
-    projet1: ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg'],
-    projet2: ['images/image4.jpg', 'images/image5.jpg', 'images/image6.jpg'],
-    projet3: ['images/image7.jpg', 'images/image8.jpg', 'videos/video1.mp4']
+    projet1: ['projets/image1.jpg', 'projets/image2.jpg', 'projets/image3.jpg'],
+    projet2: ['projets/lucittron/img_3.webp', 'projets/lucittron/img_2.webp'],
+    projet3: ['']
   };
 
   // Rotations fixes pour chaque média de chaque projet (les valeurs sont en degrés)

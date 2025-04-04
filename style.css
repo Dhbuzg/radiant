@@ -68,7 +68,7 @@ body {
 
 /* Séparateur entre chaque projet (s'applique à tous sauf le dernier) */
 .projets li:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #000000;
   margin-bottom: 5px;
   padding-bottom: 5px;
 }
