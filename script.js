@@ -1,46 +1,32 @@
-'use strict';
-
 document.addEventListener('DOMContentLoaded', () => {
   const pile = document.querySelector('.pile-images');
   const placeholder = document.querySelector('.placeholder');
 
-  // Définition des projets avec leurs médias et rotations associés
+  // Définition des projets avec leurs médias associés
   const projects = {
-    projet1: {
-      medias: ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg'],
-      rotations: [-10, 5, 15]
-    },
-    projet2: {
-      medias: ['images/image4.jpg', 'images/image5.jpg', 'images/image6.jpg'],
-      rotations: [10, -5, 0]
-    },
-    projet3: {
-      medias: ['videos/video1.mp4', 'videos/video2.mp4', 'videos/video3.mp4',],
-      rotations: [-20, 12, 7]
-    }
+    projet1: ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg'],
+    projet2: ['images/image4.jpg', 'images/image5.jpg', 'images/image6.jpg'],
+    projet3: ['images/image7.jpg', 'images/image8.jpg', 'videos/video1.mp4']
   };
 
-  // Stocker le projet actuellement affiché pour éviter des rechargements inutiles
-  let currentProject = null;
+  // Rotations fixes pour chaque média de chaque projet (les valeurs sont en degrés)
+  const fixedRotations = {
+    projet1: [-10, 5, 15],
+    projet2: [10, -5, 0],
+    projet3: [-20, 12, 7]
+  };
 
-  // Fonction qui charge les médias d'un projet
+  // Fonction qui charge les médias d'un projet avec les rotations fixes
   const loadProjectMedias = (projectId) => {
-    if (currentProject === projectId) return; // Pas de rechargement si le projet est déjà affiché
-    currentProject = projectId;
-
-    // Vider la pile et masquer le placeholder
     pile.innerHTML = '';
     if (placeholder) {
       placeholder.style.display = 'none';
     }
 
-    const project = projects[projectId];
-    if (!project) return;
-    const { medias, rotations } = project;
-
+    const medias = projects[projectId] || [];
     medias.forEach((src, index) => {
       let element;
-      if (src.toLowerCase().endsWith('.mp4')) {
+      if (src.endsWith('.mp4')) {
         element = document.createElement('video');
         element.src = src;
         element.controls = false;
@@ -48,34 +34,28 @@ document.addEventListener('DOMContentLoaded', () => {
         element.autoplay = true;
         element.muted = true;
         element.setAttribute('playsinline', '');
-        element.preload = 'auto';
       } else {
         element = document.createElement('img');
         element.src = src;
         element.alt = "Image du projet";
       }
-      // Appliquer la rotation définie pour ce média
-      const angle = rotations[index] !== undefined ? rotations[index] : 0;
+      // Utilisation des rotations fixes définies pour ce projet
+      const angle = fixedRotations[projectId][index];
       element.style.transform = `rotate(${angle}deg)`;
       pile.appendChild(element);
     });
   };
 
-  // Utilisation de la délégation d'événements pour le survol des projets
-  const projectList = document.querySelector('.projets');
-  if (projectList) {
-    projectList.addEventListener('mouseover', (event) => {
-      const li = event.target.closest('li');
-      if (li && projectList.contains(li)) {
-        const projectId = li.getAttribute('data-projet');
-        if (projectId) {
-          loadProjectMedias(projectId);
-        }
-      }
+  // Afficher les médias au survol du projet
+  const projectListItems = document.querySelectorAll('.projets li');
+  projectListItems.forEach(li => {
+    li.addEventListener('mouseover', () => {
+      const projectId = li.getAttribute('data-projet');
+      loadProjectMedias(projectId);
     });
-  }
+  });
 
-  // Permettre de faire remonter le média du haut à la fin de la pile au clic
+  // Faire remonter le média du haut à la fin de la pile au clic
   pile.addEventListener('click', () => {
     const firstMedia = pile.querySelector('img, video');
     if (firstMedia) {

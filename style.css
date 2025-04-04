@@ -1,21 +1,29 @@
-/* Reset global */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: 'soleilbold';
+  src: url('fonts/SoleilBold.otf') format('woff2');
+  font-weight: bold;
+  font-style: bold;
 }
 
-/* Variables CSS */
-:root {
-  --bg-light: #f4f4f4;
-  --border-color: #ddd;
-  --transition-speed: 0.3s;
-  --text-placeholder: #888;
+@font-face {
+  font-family: 'soleilbook';
+  src: url('fonts/SoleilBook.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'soleillight';
+  src: url('fonts/SoleilLight.otf') format('woff2');
+  font-weight: light;
+  font-style: light;
+}
+
 
 /* Styles globaux */
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
 }
 
@@ -28,59 +36,70 @@ body {
 /* Colonnes */
 .colonne {
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .gauche {
-  width: 20%;
-  background-color: var(--bg-light);
-  border-right: 1px solid var(--border-color);
+  width: 20%; /* Ajusté à 20% pour la colonne de gauche */
+  border-right: 3px solid #000000;
   overflow-y: auto;
 }
 
 .droite {
-  width: 80%;
+  width: 80%; /* 80% pour la colonne de droite */
   position: relative;
   overflow: hidden;
 }
 
 /* Liste des projets */
 .projets {
+  font-family: soleilbold;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .projets li {
   padding: 10px;
   cursor: pointer;
-  transition: all var(--transition-speed) ease;
+  transition: all 0.3s ease;
   overflow: hidden;
 }
 
+/* Séparateur entre chaque projet (s'applique à tous sauf le dernier) */
 .projets li:not(:last-child) {
   border-bottom: 1px solid #ccc;
   margin-bottom: 5px;
   padding-bottom: 5px;
 }
 
+/* Style pour le titre du projet */
 .projets li .titre {
   display: block;
   font-weight: bold;
 }
 
+/* Styles pour la description masquée par défaut */
 .projets li .desc {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height var(--transition-speed) ease, opacity var(--transition-speed) ease;
+  transition: max-height 0.1s ease, opacity 0.1s ease;
   margin: 0;
 }
 
+/* Affichage de la description au survol */
 .projets li:hover .desc {
-  max-height: 100px;
+  font-family: soleillight;
+  max-height: 100px; /* Ajustez la hauteur selon la taille de vos descriptions */
   opacity: 1;
   margin-top: 5px;
 }
 
-/* Pile d'images */
+
+
+
+/* Conteneur de la pile d'images */
 .pile-images {
   width: 100%;
   height: 80%;
@@ -100,35 +119,4 @@ body {
 
 .pile-images video {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.placeholder {
-  color: var(--text-placeholder);
-  text-align: center;
-}
-
-/* Zone de description */
-.description {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  border-radius: 4px;
-  max-width: 40%;
-  font-size: 14px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-/* Media query pour la responsivité */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-  .gauche, .droite {
-    width: 100%;
-  }
-  .droite {
-    height: auto;
-  }
 }
