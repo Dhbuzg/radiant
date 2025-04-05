@@ -3,7 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const placeholder = document.querySelector('.placeholder');
 
   // Définition des projets avec leurs médias associés
+  // explication du collectif
   const projects = {
+    projet0: ['', '', ''],
+
+
+//Projet le plus récents en haut
     projet3: ['', '', ''],
     projet2: ['projets/lucittron/img_3.webp', 'projets/lucittron/img_2.webp'],
     projet1: ['', '', ''],
