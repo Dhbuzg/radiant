@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Définition des projets avec leurs médias associés (uniquement .webm et .webp)
   const projects = {
-    projet6: ['projets/severance/video_1.webm', 'projets/severance/video_2.webm'],
-    projet5: ['projets/gargaloup/img_1.webp', 'projets/gargaloup/img_2.webp', 'projets/gargaloup/img_3.webp','projets/gargaloup/img_4.webp', 'projets/gargaloup/img_5.webp'],
+    projet7: ['projets/severance/video_1.webm', 'projets/severance/video_2.webm'],
+    projet6: ['projets/gargaloup/img_1.webp', 'projets/gargaloup/img_2.webp', 'projets/gargaloup/img_3.webp','projets/gargaloup/img_4.webp', 'projets/gargaloup/img_5.webp'],
+    projet5: ['projets/clay/video_1.webm'],
     projet4: ['projets/sport/img_1.webp', 'projets/sport/img_2.webp', 'projets/sport/img_3.webp', 'projets/sport/img_4.webp', 'projets/sport/img_5.webp'],
-    projet3: ['projets/lucitron/img_1.webp', 'projets/lucitron/img_2.webp'],
-    projet2: ['', '', ''],
+    projet3: ['projets/lucitron/img_1.webp', 'projets/lucitron/img_2.webp','projets/lucitron/video_1.webm'],
+    projet2: ['projets/honeygrapes/video_1.webm'],
     projet1: ['projets/fournil/img_1.webp', 'projets/fournil/img_2.webp', 'projets/fournil/img_3.webp', 'projets/fournil/img_4.webp', 'projets/fournil/img_5.webp'],
     projet0: ['projets/radiant/theo.webp','projets/radiant/hugo.webp'],
   };
