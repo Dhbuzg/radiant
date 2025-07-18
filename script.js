@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Rotations fixes pour chaque média de chaque projet (valeurs en degrés)
   const fixedRotations = {
-    projet6: [],
+    projet6: [-10, 12, 7],
     projet5: [-10, 5, 20, -5 , 10],
     projet4: [-10, 5, 20, -5 , 10],
     projet3: [70, 12, 7],
