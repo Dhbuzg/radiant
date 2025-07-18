@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //Projet le plus récents en haut
     projet3: ['', '', ''],
-    projet2: ['projets/lucittron/img_3.webp', 'projets/lucittron/img_2.webp'],
+    projet2: ['projets/lucitron/img_1.webp', 'projets/lucitron/img_2.webp'],
     projet1: ['', '', ''],
   };
 
