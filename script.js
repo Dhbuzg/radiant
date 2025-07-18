@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //Projet le plus récents en haut
     projet3: ['', '', ''],
     projet2: ['projets/lucitron/img_1.webp', 'projets/lucitron/img_2.webp'],
-    projet1: ['', '', ''],
+    projet1: ['projets/severance/video_1.mp4', '', ''],
   };
 
   // Rotations fixes pour chaque média de chaque projet (les valeurs sont en degrés)
