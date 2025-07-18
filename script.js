@@ -2,36 +2,38 @@ document.addEventListener('DOMContentLoaded', () => {
   const pile = document.querySelector('.pile-images');
   const placeholder = document.querySelector('.placeholder');
 
-  // Définition des projets avec leurs médias associés
-  // explication du collectif
+  // Définition des projets avec leurs médias associés (uniquement .webm et .webp)
   const projects = {
-    projet0: ['', '', ''],
-
-
-//Projet le plus récents en haut
-    projet3: ['', '', ''],
-    projet2: ['projets/lucitron/img_1.webp', 'projets/lucitron/img_2.webp'],
-    projet1: ['projets/severance/video_1.mp4', '', ''],
+    projet6: ['projets/severance/video_1.webm', '', ''],
+    projet5: ['projets/gargaloup/img_1.webp', 'projets/gargaloup/img_2.webp', 'projets/gargaloup/img_3.webp','projets/gargaloup/img_4.webp', 'projets/gargaloup/img_5.webp'],
+    projet4: ['projets/sport/img_1.webp', 'projets/sport/img_2.webp', 'projets/sport/img_3.webp', 'projets/sport/img_4.webp', 'projets/sport/img_5.webp'],
+    projet3: ['projets/lucittron/img_3.webp', 'projets/lucittron/img_2.webp'],
+    projet2: ['', '', ''],
+    projet1: ['projets/fournil/img_1.webp', 'projets/fournil/img_2.webp', 'projets/fournil/img_3.webp', 'projets/fournil/img_4.webp', 'projets/fournil/img_5.webp'],
   };
 
-  // Rotations fixes pour chaque média de chaque projet (les valeurs sont en degrés)
+  // Rotations fixes pour chaque média de chaque projet (valeurs en degrés)
   const fixedRotations = {
-    projet1: [-10, 5, 15],
-    projet2: [10, -5, 0],
-    projet3: [-20, 12, 7]
+    projet6: [],
+    projet5: [-10, 5, 20, -5 , 10],
+    projet4: [-10, 5, 20, -5 , 10],
+    projet3: [70, 12, 7],
+    projet2: [],
+    projet1: [-10, 5, 20, -5 , 10],
   };
 
-  // Fonction qui charge les médias d'un projet avec les rotations fixes
+  // Charge les médias d'un projet en ne gardant que .webm et .webp
   const loadProjectMedias = (projectId) => {
     pile.innerHTML = '';
-    if (placeholder) {
-      placeholder.style.display = 'none';
-    }
+    if (placeholder) placeholder.style.display = 'none';
 
     const medias = projects[projectId] || [];
     medias.forEach((src, index) => {
+      // Ne traiter que les .webm et .webp
+      if (!/\.(webm|webp)$/i.test(src)) return;
+
       let element;
-      if (src.endsWith('.mp4')) {
+      if (/\.webm$/i.test(src)) {
         element = document.createElement('video');
         element.src = src;
         element.controls = false;
@@ -42,29 +44,33 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         element = document.createElement('img');
         element.src = src;
-        element.alt = "Image du projet";
+        element.alt = 'Image du projet';
       }
-      // Utilisation des rotations fixes définies pour ce projet
-      const angle = fixedRotations[projectId][index];
+
+      // Appliquer la rotation fixe
+      const rotations = fixedRotations[projectId] || [];
+      const angle = rotations[index] || 0;
       element.style.transform = `rotate(${angle}deg)`;
+
       pile.appendChild(element);
     });
   };
 
-  // Afficher les médias au survol du projet
-  const projectListItems = document.querySelectorAll('.projets li');
-  projectListItems.forEach(li => {
+  // Survol des projets
+  document.querySelectorAll('.projets li').forEach(li => {
     li.addEventListener('mouseover', () => {
-      const projectId = li.getAttribute('data-projet');
-      loadProjectMedias(projectId);
+      loadProjectMedias(li.getAttribute('data-projet'));
     });
   });
 
-  // Faire remonter le média du haut à la fin de la pile au clic
+  // Clic pour faire tourner aléatoirement et remonter la première image/vidéo
   pile.addEventListener('click', () => {
     const firstMedia = pile.querySelector('img, video');
-    if (firstMedia) {
-      pile.appendChild(firstMedia);
-    }
+    if (!firstMedia) return;
+    // Générer un angle aléatoire entre -20 et 20 degrés
+    const randomAngle = Math.floor(Math.random() * 41) - 20;
+    firstMedia.style.transform = `rotate(${randomAngle}deg)`;
+    // Remettre l'élément en fin de pile
+    pile.appendChild(firstMedia);
   });
 });
