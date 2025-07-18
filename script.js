@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     projet3: ['projets/lucitron/img_1.webp', 'projets/lucitron/img_2.webp'],
     projet2: ['', '', ''],
     projet1: ['projets/fournil/img_1.webp', 'projets/fournil/img_2.webp', 'projets/fournil/img_3.webp', 'projets/fournil/img_4.webp', 'projets/fournil/img_5.webp'],
-    projet0: [],
+    projet0: ['projets/radiant/theo.webp',],
   };
 
   // Rotations fixes pour chaque média de chaque projet (valeurs en degrés)
