@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Définition des projets avec leurs médias associés (uniquement .webm et .webp)
   const projects = {
-    projet6: ['projets/severance/video_1.webm', '', ''],
+    projet6: ['projets/severance/video_1.webm', 'projets/severance/video_2.webm', ''],
     projet5: ['projets/gargaloup/img_1.webp', 'projets/gargaloup/img_2.webp', 'projets/gargaloup/img_3.webp','projets/gargaloup/img_4.webp', 'projets/gargaloup/img_5.webp'],
     projet4: ['projets/sport/img_1.webp', 'projets/sport/img_2.webp', 'projets/sport/img_3.webp', 'projets/sport/img_4.webp', 'projets/sport/img_5.webp'],
     projet3: ['projets/lucittron/img_3.webp', 'projets/lucittron/img_2.webp'],
