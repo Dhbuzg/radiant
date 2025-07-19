@@ -115,6 +115,10 @@ body {
   max-width: 80%;
   max-height: 80%;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .pile-images video {
