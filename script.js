@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Définition des projets et de leurs médias (.webm / .webp)
   const projects = {
+    projet13: [
+      'projets/hem/img_1.webp',
+      'projets/hem/img_2.webp',
+      'projets/hem/img_3.webp',
+      'projets/hem/img_4.webp',
+      'projets/hem/img_5.webp',
+      'projets/hem/img_6.webp',
+    ],
+
     projet12: [
       'projets/font/img_1.webp',
       'projets/font/img_2.webp',
