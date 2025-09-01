@@ -27,35 +27,35 @@ document.addEventListener('DOMContentLoaded', () => {
       'projets/severance/video_3.webm',
       'projets/severance/video_4.webm'
     ],
-    projet6: [
+    gargalou: [
       'projets/gargaloup/img_1.webp',
       'projets/gargaloup/img_2.webp',
       'projets/gargaloup/img_3.webp',
       'projets/gargaloup/img_4.webp',
       'projets/gargaloup/img_5.webp'
     ],
-    projet5: [
+    clay: [
       'projets/clay/video_1.webm',
       'projets/clay/video_2.webm'
     ],
-    projet4: [
+    skategolf: [
       'projets/sport/img_1.webp',
       'projets/sport/img_2.webp',
       'projets/sport/img_3.webp',
       'projets/sport/img_4.webp',
       'projets/sport/img_5.webp'
     ],
-    projet3: [
+    lucitron: [
       'projets/lucitron/img_1.webp',
       'projets/lucitron/video_2.webm',
       'projets/lucitron/img_2.webp',
       'projets/lucitron/video_1.webm'
       
     ],
-    projet2: [
+    honeygrapes: [
       'projets/honeygrapes/video_1.webm'
     ],
-    projet1: [
+    fournil: [
       'projets/fournil/img_1.webp',
       'projets/fournil/img_2.webp',
       'projets/fournil/img_3.webp',
