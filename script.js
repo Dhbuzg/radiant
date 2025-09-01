@@ -9,53 +9,53 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Définition des projets et de leurs médias (.webm / .webp)
   const projects = {
 
-    pot: [
+    projet9: [
       'projets/pot_series/video_1.webm',
       'projets/pot_series/video_2.webm',
       'projets/pot_series/video_3.webm',
       'projets/pot_series/video_4.webm'
     ],
-    lego: [
+    projet8: [
       'projets/lego/video_1.webm',
       'projets/lego/video_2.webm',
       'projets/lego/video_3.webm',
       'projets/lego/video_4.webm'
     ],
-    severance: [
+    projet7: [
       'projets/severance/video_1.webm',
       'projets/severance/video_2.webm',
       'projets/severance/video_3.webm',
       'projets/severance/video_4.webm'
     ],
-    gargalou: [
+    projet6: [
       'projets/gargaloup/img_1.webp',
       'projets/gargaloup/img_2.webp',
       'projets/gargaloup/img_3.webp',
       'projets/gargaloup/img_4.webp',
       'projets/gargaloup/img_5.webp'
     ],
-    clay: [
+    projet5: [
       'projets/clay/video_1.webm',
       'projets/clay/video_2.webm'
     ],
-    skategolf: [
+    projet4: [
       'projets/sport/img_1.webp',
       'projets/sport/img_2.webp',
       'projets/sport/img_3.webp',
       'projets/sport/img_4.webp',
       'projets/sport/img_5.webp'
     ],
-    lucitron: [
+    projet3: [
       'projets/lucitron/img_1.webp',
       'projets/lucitron/video_2.webm',
       'projets/lucitron/img_2.webp',
       'projets/lucitron/video_1.webm'
       
     ],
-    honeygrapes: [
+    projet2: [
       'projets/honeygrapes/video_1.webm'
     ],
-    fournil: [
+    projet1: [
       'projets/fournil/img_1.webp',
       'projets/fournil/img_2.webp',
       'projets/fournil/img_3.webp',
