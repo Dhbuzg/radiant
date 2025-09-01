@@ -9,19 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Définition des projets et de leurs médias (.webm / .webp)
   const projects = {
 
-    projet9: [
+    pot: [
       'projets/pot_series/video_1.webm',
       'projets/pot_series/video_2.webm',
       'projets/pot_series/video_3.webm',
       'projets/pot_series/video_4.webm'
     ],
-    projet8: [
+    lego: [
       'projets/lego/video_1.webm',
       'projets/lego/video_2.webm',
       'projets/lego/video_3.webm',
       'projets/lego/video_4.webm'
     ],
-    projet7: [
+    severance: [
       'projets/severance/video_1.webm',
       'projets/severance/video_2.webm',
       'projets/severance/video_3.webm',
