@@ -8,6 +8,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Définition des projets et de leurs médias (.webm / .webp)
   const projects = {
+    projet12: [
+      'projets/font/img_1.webp',
+      'projets/font/img_2.webp',
+      'projets/font/img_3.webp',
+      'projets/font/img_4.webp',
+      'projets/font/img_5.webp',
+      'projets/font/img_6.webp',
+    ],
+    projet11: [
+      'projets/fouillegeo/img_1.webp',
+      'projets/fouillegeo/img_2.webp',
+      'projets/fouillegeo/img_3.webp',
+      'projets/fouillegeo/img_4.webp',
+      'projets/fouillegeo/img_5.webp',
+      'projets/fouillegeo/img_6.webp',
+      'projets/fouillegeo/img_7.webp',
+    ],
+
+    projet10: [
+      'projets/13_du_mois/img_1.webp',
+      'projets/13_du_mois/img_2.webp',
+      'projets/13_du_mois/img_3.webp',
+      'projets/13_du_mois/img_4.webp',
+      'projets/13_du_mois/img_5.webp',
+      'projets/13_du_mois/img_6.webp',
+      'projets/13_du_mois/img_7.webp',
+    ],
 
     projet9: [
       'projets/pot_series/video_1.webm',
@@ -28,11 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
       'projets/severance/video_4.webm'
     ],
     projet6: [
-      'projets/gargaloup/img_1.webp',
-      'projets/gargaloup/img_2.webp',
-      'projets/gargaloup/img_3.webp',
-      'projets/gargaloup/img_4.webp',
-      'projets/gargaloup/img_5.webp'
+      'projets/gargalou/img_1.webp',
+      'projets/gargalou/img_2.webp',
+      'projets/gargalou/img_3.webp',
+      'projets/gargalou/img_4.webp',
+      'projets/gargalou/img_5.webp'
     ],
     projet5: [
       'projets/clay/video_1.webm',

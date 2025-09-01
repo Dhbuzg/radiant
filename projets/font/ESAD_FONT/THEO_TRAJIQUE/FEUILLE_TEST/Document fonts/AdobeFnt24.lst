@@ -1,0 +1,65 @@
+%!Adobe-FontList 1.24
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/theoverzeletti/Desktop/THEO_TRAJIQUE/FEUILLE_TEST/feuille_test_N&O Folder/Document fonts/AdobeFnt24.lst
+FileLength:1242
+FileModTime:770483208
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:SuisseIntlMono
+FamilyName:Suisse Int'l Mono
+StyleName:Regular
+MenuName:Suisse Int'l Mono
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Suisse Int'l Mono
+WritingScript:Roman
+OutlineFileName:/Users/theoverzeletti/Desktop/THEO_TRAJIQUE/FEUILLE_TEST/feuille_test_N&O Folder/Document fonts/SuisseIntlMono-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:25540
+FileModTime:468776172
+NameArray:0,Mac,4,Suisse Int'l Mono
+NameArray:0,Win,1,Suisse Int'l Mono
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:tragico-Regular
+FamilyName:tragico
+StyleName:Regular
+MenuName:tragico
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:tragico
+WritingScript:Roman
+OutlineFileName:/Users/theoverzeletti/Desktop/THEO_TRAJIQUE/FEUILLE_TEST/feuille_test_N&O Folder/Document fonts/tragico-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:25180
+FileModTime:769942435
+NameArray:0,Win,1,tragico
+NameArray:0,Win,16,tragico
+%EndFont
+
