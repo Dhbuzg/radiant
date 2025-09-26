@@ -8,10 +8,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Définition des projets et de leurs médias (.webm / .webp)
   const projects = {
+    projet19: [
+      'projets/foot/img-1.webp',
+      'projets/foot/img-2.webp',
+      'projets/foot/img-3.webp',
+      'projets/foot/img-4.webp',
+      'projets/foot/img-5.webp',
+      'projets/foot/img-6.webp',
+      'projets/foot/img-7.webp',
+      'projets/foot/img-8.webp',
+      'projets/foot/img-9.webp',
+    ],
+
+    projet18: [
+      'projets/balade_graphique/img-1.webp',
+      'projets/balade_graphique/img-2.webp',
+      'projets/balade_graphique/img-3.webp',
+      'projets/balade_graphique/img-4.webp',
+      'projets/balade_graphique/img-5.webp',
+      'projets/balade_graphique/img-6.webp',
+      'projets/balade_graphique/img-7.webp',
+      'projets/balade_graphique/img-8.webp',
+    ],
+
+        projet17: [
+      'projets/tenk/img-1.webp',
+      'projets/tenk/img-2.webp',
+    ],
+
+    projet16: [
+      'projets/surf/img-1.webp',
+      'projets/surf/img-2.webp',
+      'projets/surf/img-3.webp',
+      'projets/surf/img-4.webp',
+      'projets/surf/img-5.webp',
+      'projets/surf/img-6.webp',
+      'projets/surf/img-7.webp',
+    ],
+
+    projet15: [
+      'projets/panzani/img-1.webp',
+      'projets/panzani/img-2.webp',
+      'projets/panzani/img-3.webp',
+      'projets/panzani/img-4.webp',
+      'projets/panzani/img-5.webp',
+    ],
 
     projet14: [
-      'projets/besoin_envie/img-1',
-      'projets/besoin_envie/video_2.webm'
+      'projets/besoin_envie/img-1.webp',
+      'projets/besoin_envie/img-2.webp',
+      'projets/besoin_envie/img-3.webp',
+      'projets/besoin_envie/img-4.webp',
+      'projets/besoin_envie/img-5.webp',
+      'projets/besoin_envie/img-6.webp',
+      'projets/besoin_envie/img-7.webp',
     ],
 
     projet13: [
