@@ -166,8 +166,8 @@ document.addEventListener('DOMContentLoaded', () => {
       'projets/fournil/img_5.webp'
     ],
     projet0: [
-      'projets/radiant/theo.webp',
-      'projets/radiant/hugo.webp'
+      'projets/radiants/theo.webp',
+      'projets/radiants/hugo.webp'
     ],
   };
 
