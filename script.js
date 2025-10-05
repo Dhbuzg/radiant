@@ -214,14 +214,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Interaction : au clic, on fait tourner le premier média puis on le met en fin de pile
-  pile.addEventListener('click', () => {
-    const firstMedia = pile.querySelector('img, video');
-    if (!firstMedia) return;
-    const angle = randomBetween(-10, 10);
-    firstMedia.style.transform = `rotate(${angle}deg)`;
-    pile.appendChild(firstMedia);
-  });
+  // 5. Interaction : clic gauche → pile à gauche, clic droit → pile à droite
+pile.addEventListener('click', () => {
+  const firstMedia = pile.querySelector('img, video');
+  if (!firstMedia) return;
+  const angle = randomBetween(-10, 10);
+  firstMedia.style.transform = `rotate(${angle}deg)`;
+  pile.appendChild(firstMedia); // vers la droite (fin de pile)
+});
+
+pile.addEventListener('contextmenu', (e) => {
+  e.preventDefault(); // empêche le menu contextuel
+  const medias = pile.querySelectorAll('img, video');
+  if (medias.length === 0) return;
+  const lastMedia = medias[medias.length - 1];
+  const angle = randomBetween(-10, 10);
+  lastMedia.style.transform = `rotate(${angle}deg)`;
+  pile.prepend(lastMedia); // vers la gauche (début de pile)
+});
+
 
   // 6. Chargement par défaut du projet Radiant
   loadProjectMedias('projet0');
